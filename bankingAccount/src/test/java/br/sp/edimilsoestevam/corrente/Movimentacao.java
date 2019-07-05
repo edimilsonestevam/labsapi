@@ -26,7 +26,6 @@ public class Movimentacao extends Base{
 			.post("/transacoes")
 		.then()
 			.statusCode(201)
-			//.body(arguments, responseAwareMatcher)//FAZER A VALIDACAO DOS DADOS
 		;
 		
 	}
