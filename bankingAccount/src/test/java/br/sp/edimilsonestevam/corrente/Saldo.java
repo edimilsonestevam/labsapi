@@ -1,4 +1,4 @@
-package br.sp.edimilsoestevam.corrente;
+package br.sp.edimilsonestevam.corrente;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;

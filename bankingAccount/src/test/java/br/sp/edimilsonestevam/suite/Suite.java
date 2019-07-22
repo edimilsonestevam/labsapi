@@ -1,4 +1,4 @@
-package br.sp.edimilsoestevam.suite;
+package br.sp.edimilsonestevam.suite;
 
 import static io.restassured.RestAssured.given;
 
@@ -9,11 +9,11 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite.SuiteClasses;
 
-import br.sp.edimilsoestevam.corrente.Autenticacao;
-import br.sp.edimilsoestevam.corrente.Conta;
-import br.sp.edimilsoestevam.corrente.Movimentacao;
-import br.sp.edimilsoestevam.corrente.Saldo;
 import br.sp.edimilsonestevam.core.Base;
+import br.sp.edimilsonestevam.corrente.Autenticacao;
+import br.sp.edimilsonestevam.corrente.Conta;
+import br.sp.edimilsonestevam.corrente.Movimentacao;
+import br.sp.edimilsonestevam.corrente.Saldo;
 import io.restassured.RestAssured;
 
 @RunWith(org.junit.runners.Suite.class)//Declaracao para informar que esta classe eh uma Suite
