@@ -26,7 +26,7 @@ import io.restassured.RestAssured;
 	
 })
 
-public class Suite extends Base{
+public class TestSuite extends Base{
 
 	@BeforeClass
 	public static void login() {
