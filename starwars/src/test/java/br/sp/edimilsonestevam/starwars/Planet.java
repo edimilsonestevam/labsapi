@@ -10,7 +10,7 @@ import br.sp.edimilsonestevam.core.Base;
 public class Planet extends Base{
 
 	@Test
-	public void validarCaracteristicasPlaneta() {
+	public void ValidarCaracteristicasPlaneta() {
 		
 		String nomePlaneta = "Tatooine";
 		String periodoRotacaoPlaneta = "23";
