@@ -4,14 +4,14 @@ import static io.restassured.RestAssured.given;
 
 public class PlaceHolder {
 
-	public void mostrarAPI(String url) {
+	public void MostrarAPI(String url) {
 		
 		System.out.println("API NAME: " + "\n" + url);
 		System.out.println("------------------------------------------------------------------------------------------------------------------");
 		
 	}
 	
-	public void mostrarCookie(String url) {
+	public void MostrarCookie(String url) {
 		
 		System.out.println("COOKIE NAME:");
 		given().get(url).then().statusCode(200).log().cookies();
@@ -19,7 +19,7 @@ public class PlaceHolder {
 		
 	}
 	
-	public void mostrarCodigoDaResposta(String url) {
+	public void MostrarCodigoDaResposta(String url) {
 
 		System.out.println("RESPONSE CODE:");
 		given().get(url).then().statusCode(200).log().status();
@@ -27,7 +27,7 @@ public class PlaceHolder {
 
 	}
 	
-	public void mostrarCorpoDaResposta(String url) {
+	public void MostrarCorpoDaResposta(String url) {
 		
 		System.out.println("RESPONSE BODY:");
 		given().get(url).then().statusCode(200).log().body();
