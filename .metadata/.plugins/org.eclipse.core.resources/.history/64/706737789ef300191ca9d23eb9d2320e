@@ -1,0 +1,5 @@
+package br.sp.edimilsonestevam.service;
+
+public class Consulta {
+
+}

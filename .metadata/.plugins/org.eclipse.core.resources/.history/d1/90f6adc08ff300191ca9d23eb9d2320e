@@ -1,0 +1,15 @@
+# language: pt
+
+@Conta
+Funcionalidade: Criar uma conta no site Heroku App
+  Eu quero criar uma conta para fazer cursos
+
+  @criarConta
+  Esquema do Cenario: Criar uma conta
+    Dado eu estou na pagina para criar uma conta no Heroku App <url>
+    Quando eu informo o nome <nome>, ultimo name <sobrenome>, email <email>, endereco <endereco>, opcao assinar <opcaoAssinatura>, company <empresa>, address <endereco>, city <cidade>, state <estado>, zip code <cep>, country <pais>, mobile phone <celular>, address alias <apelidoEndereco>
+    Entao o sistema apresenta a pagina principal do site
+
+    Exemplos: 
+      | url                                                 | nome      | sobrenome | email                                   | endereco                        | opcaoAssinatura             | empresa          | endreco                     | cidade    | estado    | cep      | pais   | celular     | apelidoEndereco |
+      | https://automacaocombatista.herokuapp.com/users/new | Edimilson | Estevam   | edimilsonestevam@owltechnologies.com.br | Avenida Paulista, 171, 4º andar | sign up for our newsletter! | Owl Technologies | Av. Paulista, 171, 4º andar | São Paulo | São Paulo | 01311000 | Brasil | 11999999999 | Corporate       |

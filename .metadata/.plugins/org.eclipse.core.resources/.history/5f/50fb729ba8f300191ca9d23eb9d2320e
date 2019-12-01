@@ -1,0 +1,22 @@
+package br.sp.edimilsonestevam.service;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
+
+import br.sp.edimilsonestevam.core.Base;
+
+public class Usuario extends Base{
+	
+	public void CriarUsuaio(String email, String senha, String confirmarSenha) {
+	
+		given()
+			.body("{\"email\": +email+,\"password\": +senha+,\"password_confirmation\": +confirmarSenha}")
+		.when()
+			.post("/users")
+		.then()
+			.log().all()
+			.statusCode(201)
+		;
+		
+	}
+}

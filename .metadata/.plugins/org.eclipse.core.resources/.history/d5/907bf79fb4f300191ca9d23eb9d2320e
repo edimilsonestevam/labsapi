@@ -1,0 +1,26 @@
+package TESTE;
+
+import org.junit.Test;
+
+import br.sp.edimilsonestevam.core.Base;
+import br.sp.edimilsonestevam.service.Consulta;
+import br.sp.edimilsonestevam.service.Usuario;
+
+public class Teste extends Base{
+
+	@Test
+	public void testar() {
+		
+		
+		Usuario user = new Usuario();
+		user.CriarUsuario("edimilsonestevam@uol.com.br", "teste123", "teste123");
+		
+		Consulta sameUser = new Consulta();
+		
+		
+		
+		
+
+	}
+
+}

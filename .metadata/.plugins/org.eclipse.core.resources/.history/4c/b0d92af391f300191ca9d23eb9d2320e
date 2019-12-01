@@ -1,0 +1,62 @@
+package br.sp.edimilsonestevam.page;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import br.sp.edimilsonestevam.setup.Base;
+
+public class Conta extends Base{
+
+	public Conta(WebDriver navegador) {
+		super(navegador);
+	
+	}
+
+	public void CadastroInformacaoPessoal(String nome, String sobrenome, String email, String endereco, String universidade, String profissiao, String genero, String idade) {
+		
+		System.out.println("• Realizando Cadastro...");
+		
+		String idNome = "user_name";
+		String idSobrenome = "user_lastname";
+		String idEmail = "user_email";
+		String idEndereco = "user_address";
+		String idUniversidade = "user_university";
+		String idProfissiao = "user_profile";
+		String idGenero = "user_gender";
+		String idIdade = "user_age";
+
+		
+
+	}
+	
+	public void SairConta() {
+		
+		System.out.println("• Saindo da Conta...");
+		
+		String xPathBotaoSair = "//a[@class='logout']";
+		
+		navegador.findElement(By.xpath(xPathBotaoSair)).click();
+		
+	}
+	
+	public void ValidandoPaginaCorrente(String nomePagina, String urlEsperada) {
+		
+		System.out.println("• Validando Página Corrente...");
+		
+		String paginaCliente = "cliente";
+		String paginaCategoria = "categoria";
+
+		if(nomePagina.equalsIgnoreCase(paginaCliente)) {
+			String urlAtual = (String) navegador.getCurrentUrl();
+			Assert.assertEquals("Validando se está na Página do Cliente", urlEsperada, urlAtual);
+		}
+		else if(nomePagina.equalsIgnoreCase(paginaCategoria)) {
+			String urlAtual = (String) navegador.getCurrentUrl();
+			Assert.assertEquals("Validando se está na Página de Categoria", urlEsperada, urlAtual);
+		}
+		else {
+			System.out.println("Dados informados estão errados!");
+		}
+	}
+}

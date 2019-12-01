@@ -1,0 +1,15 @@
+#language: pt
+
+Funcionalidade: Criar uma conta de usuario
+    -Eu quero criar uma conta de usuario
+
+@criarContaUsuario
+Esquema do Cenario: Criar Conta de Usuario
+    Dado eu estou com acesso ao servico da API de Tarefas
+    Quando eu informo email <email>, senha <senha>, confirmacao de senha <confirmarSenha>
+    E eu executo a API de Tarefas <api>
+    Entao o sistema retorna o codigo da resposta <responseCode>
+
+    Exemplos:
+    | email                                   | senha    | confirmarSenha | api                                          | responseCode |
+    |	edimilsonestevam@owltechnologies.com.br | teste123 | teste123       | "https://api-de-tarefas.herokuapp.com/users" | 201          |

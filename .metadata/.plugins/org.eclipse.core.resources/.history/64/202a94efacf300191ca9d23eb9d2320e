@@ -1,0 +1,70 @@
+package br.sp.edimilsonestevam.service;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
+
+public class Consulta {
+
+	public void MostrarAPI(String url) {
+		
+		System.out.println("API NAME: " + "\n" + url);
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+		given()
+			.get(url)
+		.then()
+			.log().headers()
+		;
+		
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+	}
+	
+	public void MostrarCodigoDaResposta(String url) {
+
+		System.out.println("RESPONSE CODE:");
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		given()
+			.get(url)
+		.then()
+			.statusCode(200)
+			.log().status()
+		;
+		
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+
+	}
+	
+	public void MostrarSeUsuarioFoiCriado(String url, String idlUsuario, String emailUsuario) {
+		
+		System.out.println("RESPONSE USER NAME:");
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+		given()
+			.get(url)
+		.then()
+			.statusCode(200)
+			.body("id", is(idlUsuario))
+			.body("email", containsString(emailUsuario))
+		;
+		
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+	}
+	
+	public void MostrarCorpoDaResposta(String url) {
+		
+		System.out.println("RESPONSE BODY:");
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+		given()
+			.get(url)
+		.then()
+			.statusCode(200)
+			.log().body()
+		;
+		
+		System.out.println("------------------------------------------------------------------------------------------------------------------");
+		
+	}
+}
