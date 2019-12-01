@@ -1,2 +1,0 @@
-INDEX VERSION 1.131+C:\Users\edimi\Repositories\GitHub\labsapi\.metadata\.plugins\org.eclipse.jdt.core
-3397281867.index

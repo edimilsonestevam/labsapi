@@ -1,8 +1,0 @@
-package br.sp.edimilsonestevam.service;
-
-import static io.restassured.RestAssured.given;
-
-public class Usuario {
-
-	
-}
