@@ -1,4 +1,4 @@
-package br.sp.edimilsonestevam.core;
+package br.sp.edimilsonestevam.setup;
 
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;

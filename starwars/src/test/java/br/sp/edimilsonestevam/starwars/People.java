@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.given;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
-import br.sp.edimilsonestevam.core.Base;
+import br.sp.edimilsonestevam.setup.Base;
 
 public class People extends Base{
 
